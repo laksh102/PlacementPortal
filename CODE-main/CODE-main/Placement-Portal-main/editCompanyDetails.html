@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Company Details</title>
+    <link rel="stylesheet" href="css/editCD.css" type="text/css" /> 
+</head>
+<body>
+
+    <div id="header">
+        <div id="logo-holder" style="align-items: center;">
+          <div id="logo" style="height:50px; display: flex; align-items: center;">
+            <img src="p/logo.png" style="height: 90%; width: auto;">
+          </div>
+        </div>
+        <div id="nav" class="nav">
+            <div class="dropdown">
+                <a href="index.html" class="dropbtn">Home</a>
+                <div class="dropdown-content">
+                    <a href="index.html#about">About Us</a>
+                    <a href="index.html#whyus">Why Us</a>
+              
+                    <a href="index.html#recruiters">Past Recruiters</a>
+                    <a href="index.html#placement-record">Placement Record</a>
+                    <a href="index.html#infrastructure">Infrastructure</a>
+                    <a href="index.html#contactus">Contact Us</a>
+                </div>
+            </div>
+            <a href="companyCard.html">Placement</a>
+          <a href="login.html">Login</a>
+          <!-- <a href="javascript:void(0)" onclick="showLoginForm()"  class="blue-background">Login</a> -->
+        </div>
+      
+        <div id="nav-mobile" class="nav">
+          <a href="javascript:void(0)" onclick="$('#mobile-menu').css('display','flex')" class="blue-background">Menu</a>
+        </div>
+      </div>
+
+<div class="form-container">
+    <h2>Edit Company Details</h2>
+    <form id="company-form" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="company-id">Company ID:</label>
+            <input type="text" id="company-id" name="companyId" readonly>
+        </div>
+        <div class="form-group">
+            <label for="logo">Company Logo:</label>
+            <input type="file" id="logo" name="logo" accept="image/png, image/jpeg">
+        </div>
+        <div class="form-group">
+            <label for="name">Company Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter company name">
+        </div>
+        <div class="form-group">
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" rows="4" placeholder="Enter company description"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="visit-date">Placement Drive Date:</label>
+            <input type="text" id="visit-date" name="visitDate" placeholder="Enter placement drive date">
+        </div>
+        <div class="form-group">
+            <label for="students-placed">Number of Students Placed:</label>
+            <input type="text" id="students-placed" name="studentsPlaced" placeholder="Enter number of students placed">
+        </div>
+        <div class="form-group">
+            <label for="package">Highest Package:</label>
+            <input type="text" id="package" name="package" placeholder="Enter highest package">
+        </div>
+        <div id="question-container" class="form-group">
+            <label>Interview Questions:</label>
+            <div class="question-item">
+                <input type="text" name="interviewQuestions[]" placeholder="Enter interview question">
+                <button type="button" class="add-question-btn" onclick="addQuestion()">Add More</button>
+            </div>
+        </div>
+        <div class="form-group">
+            <button type="button" onclick="saveChanges()">Save Changes</button>
+        </div>
+    </form>
+</div>
+
+<footer id="footer">
+    <div class="heading-footer" style="align-items: center;">
+      <h1 class="fot-head" style="color: white;">
+        Placement Cell, PIET 
+        </h1>
+    </div>
+    <div id="footer-container-down">
+      <div id="footer-address" class="flex-footer">
+        <span class="footer-subsection-heading" style="width: 100%; text-align: center;">
+          ADDRESS
+        </span>
+        <div class="footer-subsection-text">
+          POORNIMA Institute Of Engineering & Technology <br>   <br>
+          Jaipur <br> PIN - 302033.
+        </div>
+      </div>
+      <div id="footer-quick-links" class="flex-footer">
+        <span class="footer-subsection-heading" style="width: 100%; text-align: center;">
+          QUICK LINKS
+        </span>
+        <div class="footer-subsection-text">
+          <a href="http://PIET.ac.in/php/e-Brochure.php" target="_blank" rel="noopener noreferrer">
+            Placement Brochure</a></br>
+          <a href="http://PIET.ac.in/newfacultypages/faculty1.php" target="_blank"
+            rel="noopener noreferrer">Faculty Members</a></br>
+          <a href="http://PIET.ac.in/php/administration.php" target="_blank"
+            rel="noopener noreferrer">Administrative body</a></br>
+        </div>
+      </div>
+      <div id="footer-explore" class="flex-footer">
+        <span class="footer-subsection-heading" style="width: 100%; text-align: center;">
+          EXPLORE
+        </span>
+        <div class="footer-subsection-text">
+          <a href="http://PIET.ac.in/php/Facilities_landing_page-v6.php" target="_blank"
+            rel="noopener noreferrer">Facilities</a></br>
+          <a href="https://PIET.ac.in/php/studentachievement.php" target="_blank" rel="noopener noreferrer">
+            Student's Achievements</a></br>
+          <a href="https://PIET.ac.in/php/Academic_cal.php" target="_blank"
+            rel="noopener noreferrer">Academic Calendar</a></br>
+          <a href="https://PIET.ac.in/php/proj_spons.php" target="_blank" rel="noopener noreferrer">
+            Sponsored Projects</a></br>
+          <a href="http://PIET.ac.in/php/reach_PIET_.php" target="_blank" rel="noopener noreferrer">How to
+            reach PIET </a></br>
+        </div>
+      </div>
+      <div id="footer-contact-us" class="flex-footer">
+        <span class="footer-subsection-heading" style="width: 100%; text-align: center;">
+          CONTACT US
+        </span>
+        <div class="footer-subsection-text">
+          <a href="mailto:tnp@PIET.ac.in">Placement Cell - tnp@PIET.ac.in</a></br>
+          <a href="mailto:studentcoordinator_placement@PIET.ac.in">Contact no : +91 8168824544</a></br>
+        </div>
+        <div id="footer-icons" style="display:inline-flex;">
+          <a href="https://www.linkedin.com/in/tnpinPIET/" target="_blank"><img style="width:80%; height:80%;"
+              src="img/linkedin.png" /> </a>
+          <a href="https://twitter.com/PIETk_placement" target="_blank"> <img style="width:80%; height:80%;"
+              src="img/twitter.png" /></a>
+          <a href="https://www.youtube.com/channel/pc" target="_blank"><img
+              style="width:80%; height:80%;" src="img/youtube.png"/></a>
+          <a href="mailto:tnp@PIET.ac.in" target="_blank"><img style="width:80%; height:80%;"
+              src="img/email.png"/></a>
+        </div>
+      </div>
+    </div>
+    <div id="footer-credits">
+      Copyright &copy; 2023 PIET .
+    </div>
+</footer>
+
+<script>
+    // Function to add more interview questions
+    function addQuestion() {
+        const questionContainer = document.getElementById('question-container');
+
+        const questionItem = document.createElement('div');
+        questionItem.classList.add('question-item');
+        
+        const input = document.createElement('input');
+        input.type = 'text';
+        input.name = `interviewQuestions[${questionCount++}]`;
+        input.placeholder = 'Enter interview question';
+
+        questionItem.appendChild(input);
+
+        const addButton = document.createElement('button');
+        addButton.classList.add('add-question-btn');
+        addButton.type = 'button';
+        addButton.textContent = 'Add More';
+        addButton.onclick = addQuestion;
+
+        questionItem.appendChild(addButton);
+      //  questionContainer.insertBefore(questionItem, document.querySelector('.add-question-btn'));
+        questionContainer.appendChild(questionItem);
+    }
+
+    // Function to save changes to company details
+    async function saveChanges() {
+        const formData = new FormData(document.getElementById('company-form'));
+        try {
+            const companyId = document.getElementById('company-id').value;
+
+            const response = await fetch(`http://localhost:8080/api/companies/${companyId}`, {
+                method: 'PUT',
+                body: formData
+            });
+            if (response.ok) {
+                alert('Company details updated successfully');
+                window.location.href = `company-details.html?id=${companyId}`;
+            } else {
+                alert('Failed to update company details');
+            }
+        } catch (error) {
+            console.error('Error updating company details:', error);
+            alert('Error updating company details. Please try again.');
+        }
+    }
+
+    // Function to fetch company details based on ID
+    async function fetchCompanyDetails() {
+        try {
+            const urlParams = new URLSearchParams(window.location.search);
+            const companyId = urlParams.get('id');
+
+            const response = await fetch(`http://localhost:8080/api/companies/${companyId}`);
+            const companyDetails = await response.json();
+
+            // Populate form fields with company details
+            document.getElementById('name').value = companyDetails.name;
+            document.getElementById('description').value = companyDetails.description;
+            document.getElementById('visit-date').value = companyDetails.visitDate;
+            document.getElementById('students-placed').value = companyDetails.studentsPlaced;
+            document.getElementById('package').value = companyDetails.package;
+            document.getElementById('company-id').value = companyId;
+
+            // Populate interview questions
+            const interviewQuestions = companyDetails.interviewQuestions.split('\n');
+            const questionContainer = document.getElementById('question-container');
+            interviewQuestions.forEach(question => {
+                const questionItem = document.createElement('div');
+                questionItem.classList.add('question-item');
+                
+                const input = document.createElement('input');
+                input.type = 'text';
+                input.name = 'interviewQuestions[]';
+                input.value = question;
+                input.placeholder = 'Enter interview question';
+    
+                questionItem.appendChild(input);
+                questionContainer.appendChild(questionItem);
+            });
+        } catch (error) {
+            console.error('Error fetching company details:', error);
+            alert('Error fetching company details. Please try again.');
+        }
+    }
+
+    // Fetch and display company details on page load
+    fetchCompanyDetails();
+</script>
+
+</body>
+</html>

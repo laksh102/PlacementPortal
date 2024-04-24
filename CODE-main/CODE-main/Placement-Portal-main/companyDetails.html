@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Company Details</title>
+  <link rel="stylesheet" href="css/companyD.css" type="text/css" />
+</head>
+
+<body>
+  <div id="header">
+    <div id="logo-holder" style="align-items: center;">
+      <div id="logo" style="height:50px; display: flex; align-items: center;">
+        <img src="p/logo.png" style="height: 90%; width: auto;">
+      </div>
+    </div>
+    <div id="nav" class="nav">
+      <div class="dropdown">
+        <a href="index.html" class="dropbtn">Home</a>
+        <div class="dropdown-content">
+            <a href="index.html#about">About Us</a>
+            <a href="index.html#whyus">Why Us</a>
+      
+            <a href="index.html#recruiters">Past Recruiters</a>
+            <a href="index.html#placement-record">Placement Record</a>
+            <a href="index.html#infrastructure">Infrastructure</a>
+            <a href="index.html#contactus">Contact Us</a>
+        </div>
+    </div>
+    <a href="companyCard.html">Placement</a>
+    <a href="login.html">Login</a>
+      <!-- <a href="javascript:void(0)" onclick="showLoginForm()"  class="blue-background">Login</a> -->
+    </div>
+
+    <div id="nav-mobile" class="nav">
+      <a href="javascript:void(0)" onclick="$('#mobile-menu').css('display','flex')" class="blue-background">Menu</a>
+    </div>
+  </div>
+
+  <div class="company-details-container">
+    <a href="company-card.html" class="back-btn">Company Cards</a>
+
+    <button class="edit-btn" id="edit-btn" onclick="editCompanyDetails()">Edit</button>
+
+    <div class="company-logo" id="company-logo">
+      <!-- Company logo will be dynamically added here -->
+    </div>
+
+    <div class="company-details" id="company-details">
+      <!-- Company details will be dynamically added here -->
+    </div>
+
+    <div class="description" id="description">
+      <!-- Company description will be dynamically added here -->
+    </div>
+
+    <div class="interview-questions" id="interview-questions">
+      <!-- Interview questions will be dynamically added here -->
+    </div>
+  </div>
+
+
+  <div id="footer">
+    <div class="heading-footer" style="align-items: center;">
+      <h1 class="fot-head" style="color: white;">
+        Placement Cell, PIET
+      </h1>
+    </div>
+    <div id="footer-container-down">
+      <div id="footer-address" class="flex-footer">
+        <span class="footer-subsection-heading" style="width: 100%; text-align: center;">
+          ADDRESS
+        </span>
+        <div class="footer-subsection-text">
+          POORNIMA Institute Of Engineering & Technology <br> <br>
+          Jaipur <br> PIN - 302033.
+        </div>
+      </div>
+      <div id="footer-quick-links" class="flex-footer">
+        <span class="footer-subsection-heading" style="width: 100%; text-align: center;">
+          QUICK LINKS
+        </span>
+        <div class="footer-subsection-text">
+          <a href="http://PIET.ac.in/php/e-Brochure.php" target="_blank" rel="noopener noreferrer">
+            Placement Brochure</a></br>
+          <a href="http://PIET.ac.in/newfacultypages/faculty1.php" target="_blank" rel="noopener noreferrer">Faculty
+            Members</a></br>
+          <a href="http://PIET.ac.in/php/administration.php" target="_blank" rel="noopener noreferrer">Administrative
+            body</a></br>
+        </div>
+      </div>
+      <div id="footer-explore" class="flex-footer">
+        <span class="footer-subsection-heading" style="width: 100%; text-align: center;">
+          EXPLORE
+        </span>
+        <div class="footer-subsection-text">
+          <a href="http://PIET.ac.in/php/Facilities_landing_page-v6.php" target="_blank"
+            rel="noopener noreferrer">Facilities</a></br>
+          <a href="https://PIET.ac.in/php/studentachievement.php" target="_blank" rel="noopener noreferrer">
+            Student's Achievements</a></br>
+          <a href="https://PIET.ac.in/php/Academic_cal.php" target="_blank" rel="noopener noreferrer">Academic
+            Calendar</a></br>
+          <a href="https://PIET.ac.in/php/proj_spons.php" target="_blank" rel="noopener noreferrer">
+            Sponsored Projects</a></br>
+          <a href="http://PIET.ac.in/php/reach_PIET_.php" target="_blank" rel="noopener noreferrer">How to
+            reach PIET </a></br>
+        </div>
+      </div>
+      <div id="footer-contact-us" class="flex-footer">
+        <span class="footer-subsection-heading" style="width: 100%; text-align: center;">
+          CONTACT US
+        </span>
+        <div class="footer-subsection-text">
+          <a href="mailto:tnp@PIET.ac.in">Placement Cell - tnp@PIET.ac.in</a></br>
+          <a href="mailto:studentcoordinator_placement@PIET.ac.in">Contact no : +91 8168824544</a></br>
+        </div>
+        <div id="footer-icons" style="display:inline-flex;">
+          <a href="https://www.linkedin.com/in/tnpinPIET/" target="_blank"><img style="width:80%; height:80%;"
+              src="img/linkedin.png" /> </a>
+          <a href="https://twitter.com/PIETk_placement" target="_blank"> <img style="width:80%; height:80%;"
+              src="img/twitter.png" /></a>
+          <a href="https://www.youtube.com/channel/UCdnaperuWO_6YfXzEov6-QA" target="_blank"><img
+              style="width:80%; height:80%;" src="img/youtube.png" /></a>
+          <a href="mailto:tnp@PIET.ac.in" target="_blank"><img style="width:80%; height:80%;" src="img/email.png" /></a>
+        </div>
+      </div>
+    </div>
+    <div id="footer-credits">
+      Copyright &copy; 2023 PIET .
+    </div>
+  </div>
+  <script>
+    // Function to fetch company details based on CID
+    async function fetchCompanyDetails() {
+      try {
+        const urlParams = new URLSearchParams(window.location.search);
+        const cid = urlParams.get('cid'); // Get CID from URL query parameter
+
+        const response = await fetch(`http://localhost:8080/api/companies/${cid}`);
+        const companyDetails = await response.json();
+
+        displayCompanyDetails(companyDetails);
+      } catch (error) {
+        console.error('Error fetching company details:', error);
+      }
+    }
+
+    // Function to display company details
+    function displayCompanyDetails(company) {
+      // Display company logo
+      const companyLogoContainer = document.getElementById('company-logo');
+      companyLogoContainer.innerHTML = `<img src="${company.logo}" alt="${company.name} Logo">`;
+
+      // Display company details
+      const companyDetailsContainer = document.getElementById('company-details');
+      companyDetailsContainer.innerHTML = `
+            <label>Company Name:</label>
+            <p>${company.name}</p>
+            <label>Placement Drive Date:</label>
+            <p>${company.visitDate}</p>
+            <label>Number of Students Placed:</label>
+            <p>${company.studentsPlaced}</p>
+            <label>Highest Package:</label>
+            <p>${company.package}</p>
+        `;
+
+      // Display company description
+      const descriptionContainer = document.getElementById('description');
+      descriptionContainer.innerHTML = `
+            <label>Description:</label>
+            <p>${company.description}</p>
+        `;
+
+      // Display interview questions
+      const interviewQuestionsContainer = document.getElementById('interview-questions');
+      const interviewQuestions = company.interviewQuestions.split('\n');
+      let interviewQuestionsHTML = '<h3>Interview Questions Asked:</h3>';
+      interviewQuestions.forEach((question, index) => {
+        interviewQuestionsHTML += `
+                <div class="interview-question">
+                    <span>${index + 1}. ${question}</span>
+                    <span class="like-btn" onclick="likeQuestion(${index})">❤️</span>
+                </div>
+            `;
+      });
+      interviewQuestionsContainer.innerHTML = interviewQuestionsHTML;
+    }
+
+    // Function to handle editing company details
+    function editCompanyDetails() {
+      // Redirect to edit page with company CID
+      const urlParams = new URLSearchParams(window.location.search);
+      const cid = urlParams.get('cid');
+      window.location.href = `edit-company.html?cid=${cid}`;
+    }
+
+    // Function to handle liking a question
+    function likeQuestion(index) {
+      // Implement liking functionality here
+      // For demonstration, let's just alert the index of the liked question
+      alert(`Liked question ${index + 1}`);
+    }
+
+    // Fetch and display company details on page load
+    fetchCompanyDetails();
+
+  </script>
+
+</body>
+
+</html>

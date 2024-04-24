@@ -1,0 +1,1099 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>
+    Placement Cell, POORNIMA
+  </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#204584">
+  <meta name="msapplication-navbutton-color" content="#204584">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#204584">
+  <link rel="icon" href="img/download.png">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/slider.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript">
+    google.charts.load('current', { 'packages': ['corechart'] });
+    google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+      var data = google.visualization.arrayToDataTable([
+        ['BATCH', 'Highest Package in LPA', 'Average Package in LPA',],
+        ['2014-18', 10, 3],
+        ['2015-19', 10, 3.4],
+        ['2016-20', 17, 6.2],
+        ['2017-21', 17, 8],
+        ['2018-22', 15, 10.73]
+        ['Year', 'Average', 'Highest'],
+        ['2017', 6, 10],
+        ['2018', 6.7, 11],
+        ['2019', 7.3, 13],
+        ['2020', 7.8, 15],
+        ['2021', 8.4, 17],
+        ['2022', 10.54, 20]
+      ]);
+
+      var options = {
+        title: 'Placements Stats',
+        curveType: 'function',
+        legend: { position: 'bottom' }
+      };
+
+      var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+      chart.draw(data, options);
+    }
+  </script>
+
+</head>
+
+<body>
+  <div id="header">
+    <div id="logo-holder" style="align-items: center;">
+      <div id="logo" style="height:50px; display: flex; align-items: center;">
+        <img src="p/logo.png" style="height: 90%; width: auto;">
+      </div>
+    </div>
+    <div id="nav" class="nav">
+        <div class="dropdown">
+          <a href="#header_top" class="dropbtn">Home</a>
+          <div class="dropdown-content">
+              <a href="#about">About Us</a>
+              <a href="#whyus">Why Us</a>
+              <a href="#recruiters">Past Recruiters</a>
+              <a href="#placement-record">Placement Record</a>
+              <a href="#infrastructure">Infrastructure</a>
+              <a href="#contactus">Contact Us</a>
+          </div>
+      </div>
+    
+      <a href="companyCard.html">Placement</a>
+      <a href="login.html">Login</a>
+      <!-- <a href="javascript:void(0)" onclick="showLoginForm()"  class="blue-background">Login</a> -->
+    </div>
+
+    <div id="nav-mobile" class="nav">
+      <a href="javascript:void(0)" onclick="$('#mobile-menu').css('display','flex')" class="blue-background">Menu</a>
+    </div>
+  </div>
+  <!-- hamburger -->
+  <div class="header-hamburgerrr">
+    <div class="hamburgerrr-line1"></div>
+    <!-- <div class="hamburger-line2"></div> -->
+    <div class="hamburgerrr-line3"></div>
+  </div>
+  <!-- hamburger end -->
+  <div id="header_top">
+    <div class="header_top-flex">
+
+      <div class="header_top-left" style="text-align: center;">
+        <h1>Poornima Institute Of Engineering & Technology</h1>
+        <!-- <img class="header_top-img" src="./img/left.png" alt="left img"> -->
+      </div>
+    </div>
+  </div>
+
+
+  <div id="home" class="section">
+    <img src="img/background.svg" class="home-background">
+    <div>
+      <div class="home-text">
+        <span class="heading" style="font-size: 35px;"><br>Training and Placement Cell, </br> PIET</span><br>
+
+        <span class="heading">Placement Portal</span><br>
+        <p style="max-width: 400px;" class="home_para">Passion is the difference between having a job or having a
+          career./><br>
+          <a href="" target="_blank" class="brochure-link">Placement
+            Brochure&nbsp;&nbsp;<i class="fas fa-download"></i></a>
+          <br>
+          <!-- <a href="#" class="download-link">Placement Invitation&nbsp;&nbsp;<i class="fas fa-download"></i></a> -->
+      </div>
+    </div>
+    <div class="employees-image"
+      style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+      <img src="img/team.gif" style="width:100%;">
+    </div>
+  </div>
+
+  <div id="about" class="section">
+    <div class="about-text">
+      <h3 class="headinggs heading2">Poornima Institute Of Engineering & Technology</h3>
+      <p style="line-height: 100%; font-size: 1.1rem">
+        Poornima Institute of Engineering & Technology, was established in 2007 with the aim of imparting
+        pragmatic technical education. In its magnificent journey of 12 years, PIET has set benchmarks and reached
+        at new pinnacles in Engineering Education with dedication, perseverance and devotion. PIET is spearheading
+        its outstanding voyage with the motto 'Success is not a destination, it's a journey'.
+      </p>
+    </div>
+    <div class="about-img">
+
+      <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="d-block w-100" src="p/poor.png" alt="First slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="p/piet1.png" alt="Second slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="p/piet2.png" alt="Third slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="p/piet3.png" alt="Fourth slide">
+          </div>
+
+          <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+
+  <hr>
+
+  <div id="whyus">
+    <div class="headinggs small-heading " style="margin:0 auto;">
+      <h2 style="text-align: center;">Why Recruit at PIET?</h2>
+    </div>
+
+    <div class="feat bg-gray pt-5 pb-5">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-4 col-sm-6">
+            <div class="item"> <span class="icon feature_box_col_one" style="text-align:center;"><i class="fa fa-globe"
+                  style="font-size:40px;"></i></span>
+              <h6 style="text-align:center;">Our Motto</h6>
+              <p>POORNIMA Institute Of Engineering & Technology has been setup with an objective to produce
+                best-in-class human resources in IT and to harness the multidimensional facets of IT in various domains.
+                PIET strives to evolve into a world-class academic institution with the highest quality of
+                education and research facilities.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-sm-6">
+            <div class="item"> <span class="icon feature_box_col_two" style="text-align:center;"><i class="fa fa-anchor"
+                  style="font-size:40px;"></i></span>
+              <h6 style="text-align:center;">Our Mission</h6>
+              <p>The Institute aligns all its activities to serve national interest and seeks To provide broad-based
+                education, helping students hone their professional skills and acquire the best-in-class capabilities in
+                their respective disciplines To draw the best expertise in science, technology, management and law so as
+                to equip students with the skills to visualize, synthesize and execute projects.
+
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-sm-6">
+            <div class="item"> <span class="icon feature_box_col_three" style="text-align:center;"><i
+                  class="fa fa-hourglass-half" style="font-size:40px;"></i></span>
+              <h6 style="text-align:center;">Our Vision</h6>
+              <p>To be a center of excellence in education and research, producing global leaders in science, technology
+                and management To be a hub of knowledge creation that priorities the frontier areas of national and
+                global importance PIET, will not only create industry ready IT Graduates to feed the demand of
+                the industry, but it will also act as a catalyst.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-sm-6">
+            <div class="item"> <span class="icon feature_box_col_four" style="text-align:center;"><i
+                  class="fa fa-database" style="font-size:40px;"></i></span>
+              <h6 style="text-align:center;">Strong Industry Interface</h6>
+              <p>PIET has a strong, active and growing interface with business and industry, with experts from a range
+                of leading companies and thought leaders of IT Industry delivering regular guest lectures and serving as
+                members of various advisory boards.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-sm-6">
+            <div class="item"> <span class="icon feature_box_col_five" style="text-align:center;"><i
+                  class="fa fa-upload" style="font-size:40px;"></i></span>
+              <h6 style="text-align:center;">Projects</h6>
+              <p>Students are encouraged to take up projects on contemporary topics as a part of their independent study
+                whch includes image processing, Cryptography, Artificial Intelligence And Machine Learning. Arrangements
+                will be made for practical training on projects of leading companies. </p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-sm-6">
+            <div class="item"> <span class="icon feature_box_col_six" style="text-align:center;"><i class="fa fa-camera"
+                  style="font-size:40px;"></i></span>
+              <h6 style="text-align:center;">Achievements</h6>
+              <p>Selection in GOOGLE SUMMER OF CODE, Teams in ICPC REGIONALS, Selections in SMART INDIA HACKATHON,
+                GOOGLE SUMMER OF CODE & CODE-IN MENTOR Selections, GOOGLE BUILD FOR DIGITAL INDIA Selections, MLH
+                FELLOWSHIP Selection (SPONSORED BY GITHUB).</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+  <hr>
+  <div id="recruiters">
+    <h1 class="headinggs small-heading" style="width: 90%; margin:0 auto;">
+      Past Recruiters
+    </h1>
+    <div class="image-container">
+      <div class="image-wrapper">
+        <div>
+          <img src="./img/pngwing.com.png" alt="" height="70%" width="70%">
+        </div>
+        <div class="slide">
+          <img src="./img/yelloClass_intern.png" alt="" height="80%" width="80%">
+        </div>
+        <div>
+          <img src="./img/gojek.jpg" alt="" height="100%" width="100%">
+        </div>
+        <div>
+          <img src="./img/Goldman_Sachs-Logo.wine.png" alt="" height="100%" width="100%">
+        </div>
+        <div>
+          <img src="./img/Gupshup.png" alt="" height="100%" width="100%">
+        </div>
+        <div>
+          <img src="./img/amazon-n.png" alt="" height="100%" width="100%">
+        </div>
+
+        <div class="slide">
+          <img src="./img/sqaudstack.jpg" alt="" height="70%" width="70%">
+        </div>
+
+        <div class="slide">
+          <img src="./img/cognizant.jpeg" alt="">
+        </div>
+        <div class="slide">
+          <img src="./img/cisco.png" alt="" height="70%" width="70%">
+        </div>
+        <div class="slide">
+          <img src="./img/accolite.png" alt="" height="90%" width="80%">
+        </div>
+
+        <div class="slide">
+          <img src="./img/gobudgo.jpg" alt="" height="80%" width="40%">
+        </div>
+
+        <div class="slide">
+          <img src="./img/infolo.jpg" alt="" height="80%" width="60%">
+        </div>
+        <div class="slide">
+          <img src="./img/infosys.png" alt="" height="80%" width="200px">
+        </div>
+        <div class="slide">
+          <img src="./img/jio.png" alt="" height="90%" width="90%">
+        </div>
+
+        <div class="slide">
+          <img src="./img/maq.png" alt="" height="100%" width="100%">
+        </div>
+        <div class="slide">
+          <img src="./img/mihup.png" alt="" height="80%" width="80%">
+        </div>
+        <div class="slide">
+          <img src="./img/tata1mg.png" alt="">
+        </div>
+
+
+        <div class="slide">
+          <img src="./img/oneshot.jpg" alt="">
+        </div>
+        <div class="slide">
+          <img src="./img/wipro.png" alt="">
+        </div>
+        <div class="slide">
+          <img src="./img/sharechat.png" alt="" height="80%" width="80%">
+        </div>
+      </div>
+
+      <div class="image-wrapper_1">
+        <div class="slide">
+          <img src="./img/314e.png" alt="" height="50%" width="50%">
+        </div>
+        <div class="slide">
+          <img src="./img/adecco_old.png" alt="" height="50%" width="50%">
+        </div>
+        <div class="slide">
+          <img src="./img/zensar.png" alt="" height="50%" width="50%">
+        </div>
+        <div class="slide">
+          <img src="./img/vap.png" alt="" height="50%" width="50%">
+        </div>
+        <div class="slide">
+          <img src="./img/trigent.jpg" alt="" height="50%" width="50%">
+        </div>
+        <div class="slide">
+          <img src="./img/vassarlab.png" alt="" height="50%" width="50%">
+        </div>
+        <div class="slide">
+          <img src="./img/thrillophilia.png" alt="" height="50%" width="50%">
+        </div>
+        <div class="slide">
+          <img src="./img/tele.png" alt="" height="50%" width="50%">
+        </div>
+        <div class="slide">
+          <img src="./img/tcGDigital.jpeg" alt="" height="50%" width="50%">
+        </div>
+        <div class="slide">
+          <img src="./img/Tanzen_intern.png" alt="" height="50%" width="50%">
+        </div>
+        <div class="slide">
+          <img src="./img/sudLife_intern.jpg" alt="">
+        </div>
+        <div class="slide">
+          <img src="./img/softech.png" alt="">
+        </div>
+        <div class="slide">
+          <img src="./img/smartprix.png" alt="">
+        </div>
+        <div class="slide">
+          <img src="./img/shopconnect.jpeg" alt="">
+        </div>
+        <div class="slide">
+          <img src="./img/ritwik.jpeg" alt="">
+        </div>
+        <div class="slide">
+          <img src="./img/redsky_technologies.png" alt="">
+        </div>
+        <div class="slide">
+          <img src="./img/quolum.png" alt="">
+        </div>
+        <div class="slide">
+          <img src="./img/publicSapient.png" alt="">
+        </div>
+
+        <div class="slide">
+          <img src="./img/planentspark.png" alt="">
+        </div>
+        <div class="slide">
+          <img src="./img/octro_intern.png" alt="">
+        </div>
+        <div class="slide">
+          <img src="./img/natinal_lib.png" alt="">
+        </div>
+        <div class="slide">
+          <img src="./img/nagarro.png" alt="">
+        </div>
+        <div class="slide">
+          <img src="./img/mindfire.png" alt="">
+        </div>
+        <div class="slide">
+          <img src="./img/loyalty_jaggernaut.png" alt="">
+        </div>
+        <div class="slide">
+          <img src="./img/kickdrum.png" alt="">
+        </div>
+        <div class="slide">
+          <img src="./img/infolo.jpg" alt="">
+        </div>
+        <div class="slide">
+          <img src="./img/fossee.png" alt="">
+        </div>
+        <div class="slide">
+          <img src="./img/ericsson.png" alt="">
+        </div>
+        <div class="slide">
+          <img src="./img/elucidata.png" alt="">
+        </div>
+        <div class="slide">
+          <img src="./img/dotpe.png" alt="">
+        </div>
+        <div class="slide">
+          <img src="./img/deltaX.png" alt="">
+        </div>
+        <div class="slide">
+          <img src="./img/cuvette.png" alt="">
+        </div>
+        <div class="slide">
+          <img src="./img/cogoport.png" alt="">
+        </div>
+        <div class="slide">
+          <img src="./img/clevertap.png" alt="">
+        </div>
+        <div class="slide">
+          <img src="./img/cdot.png" alt="">
+        </div>
+        <div class="slide">
+          <img src="./img/brigosha.jpeg" alt="">
+        </div>
+        <div class="slide">
+          <img src="./img/beehyv.png" alt="">
+        </div>
+        <div class="slide">
+          <img src="./img/Affine_Analytics.png" alt="">
+        </div>
+        <div class="slide">
+          <img src="./img/accolite.png" alt="">
+        </div>
+        <div class="slide">
+          <img src="./img/addverb.jpeg" alt="">
+        </div>
+        <div class="slide">
+          <img src="./img/adecco.png" alt="">
+        </div>
+
+        <div class="slide">
+          <img src="./img/infolo.jpg" alt="">
+        </div>
+
+        <div class="slide">
+          <img src="./img/mindfire.png" alt="">
+        </div>
+
+
+      </div>
+    </div>
+
+  </div>
+
+  <div id="" class="">
+    <h1 class="headinggs small-heading" style="margin: auto;">Placement Statistics - 2022</h1>
+    <div id="placement-synopsis">
+      <div id="placement-detail-1">
+        <div class="table100 ver5 m-b-110">
+          <div class="table100-body js-pscroll">
+            <table style="width: 100%;">
+              <caption
+                style="font-size: 25px; font-weight: none; text-align: center; background-color: #204584; color: white; padding: 7px; text-transform: uppercase; width: 100%; caption-side: top;">
+                Placement Statistics</caption>
+              <tbody>
+                <tr class="row100 body">
+                  <td class="cell100 column1">No. of Students registered</td>
+                  <td class="cell100 column2">75</td>
+                  <td class="cell100 column3" style="background-color: #008000;"></td>
+                </tr>
+
+                <tr class="row100 body">
+                  <td class="cell100 column1">Numbers of students selected</td>
+                  <td class="cell100 column2">63</td>
+                  <td class="cell100 column3" style="background-color: darkorange;"></td>
+                </tr>
+
+                <tr class="row100 body">
+                  <td class="cell100 column1">No. of Job Offers</td>
+                  <td class="cell100 column2">113</td>
+                  <td class="cell100 column3" style="background-color: #E05194;"></td>
+                </tr>
+
+                <tr class="row100 body">
+                  <td class="cell100 column1">No. of students with multiple job offers </td>
+                  <td class="cell100 column2">34</td>
+                  <td class="cell100 column3" style="background-color: #9B59B6;"></td>
+                </tr>
+
+                <tr class="row100 body">
+                  <td class="cell100 column1">% of students selected</td>
+                  <td class="cell100 column2">84%</td>
+                  <td class="cell100 column3" style="background-color: brown;"></td>
+
+                </tr>
+
+                <tr class="row100 body">
+                  <td class="cell100 column1">Highest Package</td>
+                  <td class="cell100 column2">32 LPA</td>
+                  <td class="cell100 column3" style="background-color: #F4D03F;"></td>
+                </tr>
+
+                <tr class="row100 body">
+                  <td class="cell100 column1">Average Package</td>
+                  <td class="cell100 column2">8 lpa</td>
+                  <td class="cell100 column3" style="background-color: brown;"></td>
+                </tr>
+
+
+
+                <tr tr class="row100 body">
+                  <td class="cell100 column1">Students going for Higher Studies</td>
+                  <td class="cell100 column2">2</td>
+                  <td class="cell100 column3" style="background-color: #F4D03F;"></td>
+                </tr>
+
+                <tr class="row100 body">
+                  <td class="cell100 column1">Students qualified GATE-2021</td>
+                  <td class="cell100 column2">12</td>
+                  <td class="cell100 column3" style="background-color: cornflowerblue;"></td>
+                </tr>
+
+                <tr class="row100 body">
+                  <td class="cell100 column1">Students qualified CAT-2021</td>
+                  <td class="cell100 column2">1</td>
+                  <td class="cell100 column3" style="background-color: Chocolate;"></td>
+                </tr>
+
+                <tr class="row100 body">
+                  <td class="cell100 column1">Students qualified BARC</td>
+                  <td class="cell100 column2">1</td>
+                  <td class="cell100 column3" style="background-color: red;"></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div id="textbox" style="padding-top: 10%;">
+        <table>
+          <thead>
+            <tr>
+              <th>Batch</th>
+              <th>Highest Package</th>
+              <th>Average Package</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>2014-18</td>
+              <td>10</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>2015-19</td>
+              <td>10</td>
+              <td>3.4</td>
+            </tr>
+            <tr>
+              <td>2016-20</td>
+              <td>17</td>
+              <td>6.2</td>
+            </tr>
+            <tr>
+              <td>2017-21</td>
+              <td>17</td>
+              <td>8</td>
+            </tr>
+            <tr>
+              <td>2018-22</td>
+              <td>15</td>
+              <td>10.7</td>
+            </tr>
+          </tbody>
+        </table>
+
+      </div>
+    </div>
+    <div id="placement-chart">
+      <canvas id="mycanvas" width="100%" height="100%"></canvas>
+    </div>
+    <div class="placement-points">
+      <ul class="lists">
+        <li>PIET had a successful placement session during 2021-2022.</li>
+        <li>Students got offers from both on-campus and online/off-campus selection processes.</li>
+        <li>Some students have even qualified GATE, CAT and BARC, and some have went to pursue higher studies in IITs.
+        </li>
+      </ul>
+    </div>
+    <div class="passout">
+      <!-- <a href="placement_stats/placement22-23.pdf" target="_blank" class="download-link">Batch 2016 - 2020</a> -->
+      <a href="" target="_blank" class="download-link">Batch 2019 - 2023</a>
+      <a href="" target="_blank" class="download-link">Batch 2018 - 2022</a>
+      <a href="" target="_blank" class="download-link">Batch 2017 - 2021</a>
+      <a href="" target="_blank" class="download-link">Batch 2016 - 2020</a>
+      <a href="" target="_blank" class="download-link">Batch 2015 - 2019</a>
+      <a href="" target="_blank" class="download-link">Batch 2014 - 2018</a>
+      **Statistics for Academic Year 2023-24 will be updated post completion
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="bera-class">
+    <div class="messagebox" style="width: 100%;">
+      <div class="title-bar">
+        Message from Chairman's desk
+      </div>
+      <div class="content">
+        <div class="img-div-mobile">
+          <img src="img/poor.png" class="center">
+          <div style="font-size: 15px; text-align:center;">
+            <span style="font-size: 15px; font-weight: bold;">Shashikant Singhi</span><br>
+            Chairman, Board of Governors
+
+          </div>
+        </div>
+        <div class="text">
+          Warm greetings to all the stakeholders in the Placement Session of PIET – my beloved students,
+          companies visiting the campus for recruitment drives, and the training and placement cell of the Institute
+          facilitating the whole recruitment process. This stage is very crucial for the graduating students as they
+          venture into a new phase of their life to fulfil their dream. I wish all the best to their journey.
+          <br><br>
+          <strong>PIET </strong>, established in 2007, is very young with four B.Tech. batches graduating so far.
+          However, the placement records of previous years are quite encouraging with continuous improvement over the
+          years. The young and vibrant faculty members of the Institute have made sure that adequate knowledge is
+          imparted to the students, making them ready to pick up the technological and management challenges in their
+          career. With the kind of grooming we give our students in both theory and practical aspects of their
+          engineering curriculum, I am sure that frontier companies in the domain of Information Technology will be
+          highly interested in recruiting them. In the broader picture, I see this as an overall development in terms of
+          socio-technical growth in our country.
+          <br><br>
+          In this background, I would like to invite all the corporates involved in the domain of Information Technology
+          to visit PIET and recruit our students.
+        </div>
+        <!-- <div>
+            
+          </div> -->
+        <div class="img-div">
+          <img src="img/poor.png" class="center" style="width: 60%; text-align:center;"><br><br>
+          <div style="padding-left: 10px; text-align:center;">
+
+            <span style="font-size: 15px; font-weight: bold;">Dr. Dinesh Goyal</span><br>
+            Chairman, Board of Governors
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="bera-class">
+    <div class="messagebox" style="width: 100%;">
+      <div class="title-bar">
+        From the Director's Desk
+      </div>
+      <div class="content">
+        <div class="img-div-mobile">
+          <img src="img/poor.png" class="center">
+          <div style="font-size: 15px;">
+            <span style="font-size: 15px; font-weight: bold;">Dr. Dinesh Goyal</span><br>
+            Director, PIET
+
+          </div>
+        </div>
+        <div class="text">
+          It is my pleasure to introduce you to one of the youngest and vibrant technological institutes in Northern
+          India, <b>Poornima Institute Of Engineering & Technology.</b> PIET has been set up by
+          the Shanti Education.
+          Additionally, the Government of Rajasthan has lent support to the institute by granting 50 acres of land for
+          setting up the campus.
+          <br><br>
+          The major objective of PIET is to set up a model of education which can produce best-in-class human
+          resources in IT and harness the multidimensional facets of IT in various domains. Established in the year
+          2007, the "Newness" factor of PIET allows us to be constantly dynamic in our curriculum.
+          <br><br>
+          We enjoy the flexibility to quickly respond to the rapidly changing global socio-economic conditions, and can
+          efficiently adapt to the best practices of leading technical institutes. We consider this agility essential
+          for technical education today. We look forward to building this Institute as a world-class academic
+          institution with the highest quality of education and research activities.
+          <br><br>
+          We look forward to building a long-lasting and mutually beneficial relationship with you.
+        </div>
+        <!-- <div>
+            
+          </div> -->
+        <div class="img-div">
+          <img src="img/poor.png" class="center" style="width: 90%;"><br><br>
+          <div style="padding-left: 10px; text-align:center;">
+            <span style="font-size: 15px; font-weight: bold;">Dr. Dinesh Goyal</span><br>
+            Director,PIET
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="bera-class">
+    <div class="messagebox" style="width: 100%;">
+      <div class="title-bar">
+        From the Training and Placement Team
+      </div>
+      <div class="content">
+        <div class="img-div-mobile">
+          <div style="font-size: 15px;">
+            <span style="font-size: 15px; font-weight: bold;">Mrs. Dipti Lodha</span><br>
+            TPO, PIET
+          </div>
+        </div>
+        <div class="text">
+          <b>PIET </b> was established in 2007 with a motto to bridge the gap between education, research and
+          industries. It offers B.Tech. Degree in Computer Science and Engineering (CSE), Electronics and
+          Communication Engineering (ECE), Mechanical Engineering (ME), Electrical Engineering (EE), Artificial Intelligence & Data Science (AI/DS). The Institute is equipped with current state-of-the-art equipment/
+          facilities/ laboratories, and the faculty members besides teaching, are involved in a broad range of research
+          activities and industrial consultancy. Apart from imparting quality technical education, we pay special
+          attention on interpersonal skill development and teamwork among students, which are essential ingredients to
+          excel at the workplace.
+          <!-- <br><br>
+                To highlight student-industry interaction at our institute, at the end of 3rd year students from undergraduate engineering streams go for a summer internship as a part of the course curriculum. This summer internship programme helps industries to harness the talents of students.  -->
+          <br><br>
+          To emphasize on student-industry interaction, our undergraduate students undergo summer internships at the end
+          of 3rd year of their B.Tech. programme. Such endeavors not only inculcate a feel of the corporate culture
+          among students, but also help industries to identify potential candidates as their prospective employees.
+
+          <br><br>
+          We have the required facilities to conduct placement sessions, video conferencing, etc. to organize campus
+          placement activities. We invite esteemed organizations and eminent industry personnel to visit our campus
+          regularly. We envision this as opportunities to make students aware of the current industry needs, apart from
+          building the platform for recruiters to recruit our students and establish a synergetic interface. In
+          addition, we also invite companies to induct our third-year undergraduate students for summer training/
+          internships.
+
+          <br><br>
+          We look forward to build a long lasting and mutually beneficial relationship with you.
+        </div>
+        <div class="img-div">
+
+          <div style="padding-left: 10px;">
+            <img class="tpoImg" src="">
+            <span style="font-size: 15px; font-weight: bold; margin-top: 1rem; text-align: center;">mrs. Dipti
+              Lodha</span><br>
+            <img src="" class="center" style="width: 70%;"><br><br>
+            <span style="font-size: 15px; font-weight: bold;">Dr. Dipti Lodha</span><br>
+            Faculty In-charge,<br>Training and Placement Cell,<br> PIET
+          </div>
+          <br>
+          <div style="padding-left: 10px;">
+            <span style="font-size: 15px; font-weight: bold;">Mrs. Dipti LOdha</span><br>
+            Training and Placement Officer, PIET
+          </div>
+          <br>
+          <div style="padding-left: 10px;">
+            <span style="font-size: 15px; font-weight: bold;">Students</span><br>
+            PIET
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bera Version -->
+
+
+  <div id="infrastructure" class="section">
+    <div class="text-div">
+      <h2 class="headinggs">Infrastructure</h2>
+      <p>
+        The Government of Rajasthan has lent support to the institute by granting
+        50 acres of land for setting up the Campus.
+        While construction has been started in the land provided,
+        the institute is presently running from the temporary campus at Webel IT Park, .
+        <br><br>
+        The infrastructure of the building is pretty good and sufficient for the functioning of the institution.
+        The classrooms alloted for the institution are smart classrooms, which have video conferencing facility.
+        Faculties and industry experts from distant locations take classes and interact with the students through video
+        conferencing in the classrooms.
+      </p>
+    </div>
+    <div class="icons-div">
+      <a href="http://PIET.ac.in/php/Campus.php" target="_blank" class="infra-icon">
+        <img src="img/building_blue.svg">
+        <span>CAMPUS</span>
+      </a>
+      <a href="http://PIET.ac.in/php/Hostel.php" target="_blank" class="infra-icon">
+        <img src="img/bunk.svg">
+        <span>HOSTEL</span>
+      </a>
+
+      <a href="http://PIET.ac.in/php/Labs.php" target="_blank" class="infra-icon">
+        <img src="img/lab.svg">
+        <span>LAB</span>
+      </a>
+      <a href="http://PIET.ac.in/php/Library.php" target="_blank" class="infra-icon">
+        <img src="img/books.svg">
+        <span>LIBRARY</span>
+      </a>
+
+    </div>
+  </div>
+
+
+  <!-- CONTACT US -->
+  <div id="contactus">
+    <h2 class="headinggs" style="width: 90%; margin:0 auto;">Contact Us</h2>
+    <div class="container" style="margin-top:2%; ">
+
+
+      <div class="profile-sec row">
+        <div class="col-lg-4 col-md-6">
+          <div class="our-team">
+            <div class="picture">
+              <img class="img-fluid" src="">
+            </div>
+            <div class="team-content">
+
+              <h3 class="name">Mrs. Dipti Lodha</h3>
+              <h4 class="title">Faculty In-Charge <br>Training And Placement Cell<br> PIET </h4>
+              <h6 style="margin-top:5px;"><a href="mailto:dipti@poornima.org">
+                  <li class="fas fa-envelope"> dipti@poornima.org</li>
+                </a></h6>
+              <h6>
+                <li class="fas fa-phone"> +91 8168824544</li>
+              </h6>
+
+
+            </div>
+            <ul class="social" style="text-align:center;">
+              <li><a href="https://www.linkedin.com/in/dipti-lodha-916a1257/" class="fa fa-linkedin" aria-hidden="true"
+                  target="_blank"></a></li>
+              <li><a href="mailto:dipti@poornima.org" class="fa fa-google-plus" aria-hidden="true"></a></li>
+            </ul>
+          </div>
+        </div>
+
+
+        <div class="col-lg-4 col-md-6">
+          <div class="our-team">
+            <div class="picture">
+              <img class="img-fluid" src="">
+            </div>
+            <div class="team-content">
+              <h3 class="name">Mr. Avinash Sharma</h3>
+              <h4 class="title">Training and Placement Officer<br>Training And Placement Cell<br> PIET </h4>
+              <h6 style="margin-top:5px;"><a href="avinash@poornima.org">
+                  <li class="fas fa-envelope"> avinash@poornima.org</li>
+                </a></h6>
+              <h6>
+                <li class="fas fa-phone"> +91 9740122889</li>
+              </h6>
+            </div>
+            <ul class="social" style="text-align:center;">
+              <li><a href="https://www.linkedin.com/in/avinash-sharma-15131a100/" class="fa fa-linkedin"
+                  aria-hidden="true" target="_blank"></a></li>
+              <li><a href="mailto:avinash@poornima.org" class="fa fa-google-plus" aria-hidden="true"></a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="our-team">
+            <div class="picture">
+              <img class="img-fluid" src="img/download.png">
+
+            </div>
+            <div class="team-content">
+              <h4 class="name" style="text-align: left;"> Training and Placement</h4>
+              <h4 class="title">Training & Placement Cell<br> PIET </h4>
+              <h6 style="margin-top:5px;"><a href="mailto:tpo@piet.ac.in">
+                  <li class="fas fa-envelope" aria-hidden="true"> tpo@poornima.org</li>
+                </a></h6>
+              <h6 style="margin-top:5px; font-size: 8px !important"><a
+                  href="mailto:studentcoordinator_placement@PIET.ac.in">
+                  <li class="fas fa-envelope" aria-hidden="true"> studentcoordinator_placement<br>@PIET.ac.in</li>
+                </a></h6>
+            </div>
+            <ul class="social" style="text-align:center;">
+
+
+              <li><a href="https://www.linkedin.com/in/tnpinPIET/" class="fa fa-linkedin" aria-hidden="true"
+                  target="_blank"></a></li>
+              <li><a href="mailto:tpo@poornima.org" class="fa fa-google-plus" aria-hidden="true"></a></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+      <button type="button" class="btn btn-primary btn-floating" id="btn-back-to-top"> <i class="fas fa-arrow-up"></i>
+      </button>
+    </div>
+  </div>
+
+
+  <div id="footer">
+    <div class="heading-footer" style="align-items: center;">
+      <h1 class="fot-head" style="color: white;">
+        Placement Cell, PIET
+      </h1>
+    </div>
+    <div id="footer-container-down">
+      <div id="footer-address" class="flex-footer">
+        <span class="footer-subsection-heading" style="width: 100%; text-align: center;">
+          ADDRESS
+        </span>
+        <div class="footer-subsection-text">
+          POORNIMA Institute Of Engineering & Technology <br> <br>
+          Jaipur <br> PIN - 302033.
+        </div>
+      </div>
+      <div id="footer-quick-links" class="flex-footer">
+        <span class="footer-subsection-heading" style="width: 100%; text-align: center;">
+          QUICK LINKS
+        </span>
+        <div class="footer-subsection-text">
+          <a href="http://PIET.ac.in/php/e-Brochure.php" target="_blank" rel="noopener noreferrer">
+            Placement Brochure</a></br>
+          <a href="http://PIET.ac.in/newfacultypages/faculty1.php" target="_blank" rel="noopener noreferrer">Faculty
+            Members</a></br>
+          <a href="http://PIET.ac.in/php/administration.php" target="_blank" rel="noopener noreferrer">Administrative
+            body</a></br>
+        </div>
+      </div>
+      <div id="footer-explore" class="flex-footer">
+        <span class="footer-subsection-heading" style="width: 100%; text-align: center;">
+          EXPLORE
+        </span>
+        <div class="footer-subsection-text">
+          <a href="http://PIET.ac.in/php/Facilities_landing_page-v6.php" target="_blank"
+            rel="noopener noreferrer">Facilities</a></br>
+          <a href="https://PIET.ac.in/php/studentachievement.php" target="_blank" rel="noopener noreferrer">
+            Student's Achievements</a></br>
+          <a href="https://PIET.ac.in/php/Academic_cal.php" target="_blank" rel="noopener noreferrer">Academic
+            Calendar</a></br>
+          <a href="https://PIET.ac.in/php/proj_spons.php" target="_blank" rel="noopener noreferrer">
+            Sponsored Projects</a></br>
+          <a href="http://PIET.ac.in/php/reach_PIET_.php" target="_blank" rel="noopener noreferrer">How to
+            reach PIET </a></br>
+        </div>
+      </div>
+      <div id="footer-contact-us" class="flex-footer">
+        <span class="footer-subsection-heading" style="width: 100%; text-align: center;">
+          CONTACT US
+        </span>
+        <div class="footer-subsection-text">
+          <a href="mailto:tnp@PIET.ac.in">Placement Cell - tnp@PIET.ac.in</a></br>
+          <a href="mailto:studentcoordinator_placement@PIET.ac.in">Contact no : +91 8168824544</a></br>
+        </div>
+        <div id="footer-icons" style="display:inline-flex;">
+          <a href="https://www.linkedin.com/in/tnpinPIET/" target="_blank"><img style="width:80%; height:80%;"
+              src="img/linkedin.png" /> </a>
+          <a href="https://twitter.com/PIETk_placement" target="_blank"> <img style="width:80%; height:80%;"
+              src="img/twitter.png" /></a>
+          <a href="https://www.youtube.com/channel/pc" target="_blank"><img
+              style="width:80%; height:80%;" src="img/youtube.png" /></a>
+          <a href="mailto:tnp@PIET.ac.in" target="_blank"><img style="width:80%; height:80%;" src="img/email.png" /></a>
+        </div>
+      </div>
+    </div>
+    <div id="footer-credits">
+      Copyright &copy; 2023 PIET .
+    </div>
+  </div>
+
+
+
+
+  <div class="complete-page-overlay hidden">
+    <div class="form-box login-box">
+      <div class="close-bar">
+        <a href="javascript:void(0)" onclick="closeForm()"><i class="fas fa-times"></i></a>
+      </div>
+
+      <div class="tab-bar">
+        <div class="tab active" onclick="switchToTabPane(this, 0)">Company</div>
+        <div class="tab" onclick="switchToTabPane(this, 1)">Student</div>
+      </div>
+
+      <div class="tab-content">
+        <div class="tab-pane" data-paneid="0" style="padding: 40px 50px; text-align: center;">
+          <img src="img/enterprise.png"
+            style="user-select:none; width: 80px; height: 80px; margin-bottom: 10px; padding: 10px; border: 1.5px solid rgb(32, 67, 128); border-radius : 5px;">
+          <input type="textbox" class="textbox" placeholder="Company Email" style="margin: 10px 0px; width: 100%;">
+          <input type="password" class="textbox" placeholder="Password" style="margin: 10px 0px; width: 100%;">
+          <input type="button" class="button" onclick="companySignUp()" style="width:100%; margin: 10px 0px;"
+            value="Login">
+        </div>
+        <div class="tab-pane" data-paneid="1" style="display: none; padding: 40px 50px; text-align: center;">
+          <img src="img/graduate.png"
+            style="user-select:none; width: 80px; height: 80px; margin-bottom: 10px; padding: 10px; border: 1.5px solid rgb(32, 67, 128); border-radius : 5px;">
+          <input type="textbox" class="textbox" placeholder="Student Email" style="margin: 10px 0px; width: 100%;">
+          <input type="password" class="textbox" placeholder="Password" style="margin: 10px 0px; width: 100%;">
+          <input type="button" class="button" onclick="companySignUp()" style="width:100%; margin: 10px 0px;"
+            value="Login">
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div id="mobile-menu">
+    <a href="#home" onclick="$('#mobile-menu').hide()">Home</a>
+    <a href="#about" onclick="$('#mobile-menu').hide()">About Us</a>
+    <a href="#infrastructure" onclick="$('#mobile-menu').hide()">Infrastructure</a>
+    <a href="#placement-record" onclick="$('#mobile-menu').hide()">Placement Record</a>
+    <a href="#footer" onclick="$('#mobile-menu').hide()">Contact Us</a>
+    <!-- <a href="register.html" onclick="$('#mobile-menu').hide()">Register</a> -->
+    <!-- <a href="javascript:void(0)" onclick="$('#mobile-menu').hide(); showLoginForm()"  class="blue-background">Login</a> -->
+  </div>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+    integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+  <script type="text/javascript" src="js/main.js"></script>
+  <script src="https://kit.fontawesome.com/66aa7c98b3.js" crossorigin="anonymous"></script>
+  <script>
+
+    const imageWrapper = document.querySelector('.image-wrapper')
+    const imageItems = document.querySelectorAll('.image-wrapper > *')
+    const imageLength = imageItems.length
+    var perView = 6
+    var perView_1 = 6
+    let totalScroll = 0
+    const delay = 2400
+    function mobile() {
+      if (window.innerWidth < 648) {
+        perView = 3
+        perView_1 = 3
+      }
+    }
+
+    mobile();
+
+    imageWrapper.style.setProperty('--per-view', perView)
+    for (let i = 0; i < perView; i++) {
+      imageWrapper.insertAdjacentHTML('beforeend', imageItems[i].outerHTML)
+    }
+
+    let autoScroll = setInterval(scrolling, delay)
+
+    function scrolling() {
+      totalScroll++
+      if (totalScroll == imageLength + 1) {
+        clearInterval(autoScroll)
+        totalScroll = 1
+        imageWrapper.style.transition = '0s'
+        imageWrapper.style.left = '0'
+        autoScroll = setInterval(scrolling, delay)
+      }
+      const widthEl = document.querySelector('.image-wrapper > :first-child').offsetWidth + 24
+      imageWrapper.style.left = `-${totalScroll * widthEl}px`
+      imageWrapper.style.transition = '2.7s'
+    }
+
+    // wrapper-2
+    const imageWrapper_1 = document.querySelector('.image-wrapper_1')
+    const imageItem_1 = document.querySelectorAll('.image-wrapper_1 > *')
+    const iamgeLength_1 = imageItem_1.length
+
+    let totalscroll_1 = 0
+    const delay_1 = 1600
+
+    imageWrapper_1.style.setProperty('--per-view', perView_1)
+    for (let i = 0; i < perView_1; i++) {
+      imageWrapper_1.insertAdjacentHTML('beforeend', imageItem_1[i].outerHTML)
+    }
+
+    let autoScroll_1 = setInterval(scrolling_1, delay_1)
+
+    function scrolling_1() {
+      totalscroll_1++
+      if (totalscroll_1 == iamgeLength_1 + 1) {
+        clearInterval(autoScroll_1)
+        totalscroll_1 = 1
+        imageWrapper_1.style.transition = '0s'
+        imageWrapper_1.style.left = '0'
+        autoScroll_1 = setInterval(scrolling_1, delay_1)
+      }
+      const widthEl_1 = document.querySelector('.image-wrapper_1 > :first-child').offsetWidth + 24
+      imageWrapper_1.style.left = `-${totalscroll_1 * widthEl_1}px`
+      imageWrapper_1.style.transition = '3s'
+    }
+  </script>
+  <!--   <script type="text/javascript" src="js/main.js"></script> -->
+</body>
+
+</html>

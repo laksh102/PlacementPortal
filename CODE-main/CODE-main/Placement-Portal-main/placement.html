@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Company Placements</title>
+  <link rel="stylesheet" href="css/placement.css">
+  <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+</head>
+
+<body>
+  <div id="header">
+    <div id="logo-holder">
+      <div id="logo">
+        <img src="img/download.png" alt="Logo">
+      </div>
+    </div>
+    <div id="nav" class="nav">
+      <a href="index.html">Home</a>
+      <a href="index.html#about">About Us</a>
+      <a href="index.html#whyus">Why Us</a>
+      <a href="index.html#recruiters">Past Recruiters</a>
+      <a href="index.html#placement-record">Placement Record</a>
+      <a href="index.html#infrastructure">Infrastructure</a>
+      <a href="index.html#contactus">Contact Us</a>
+      <a href="placement.html">Placement</a>
+      <a href="login.html">Login</a>
+    </div>
+  </div>
+
+  <div class="container">
+    <h1>Company Placements Details</h1>
+    <div class="sort-options">
+      <label for="sort">Sort by:</label>
+      <select id="sort">
+        <option value="name">Name</option>
+        <option value="year">Year</option>
+      </select>
+    </div>
+    <table id="company-table" class="company-table">
+      <thead>
+        <tr>
+          <th>Serial Number</th>
+          <th>Name of Company</th>
+          <th>Date of Placement Drive</th>
+          <th>Number of Students Placed</th>
+        </tr>
+      </thead>
+      <tbody id="company-body">
+        <!-- Companies will be dynamically added here -->
+      </tbody>
+    </table>
+  </div>
+
+  <script>
+    // http://localhost:8080/placement-record
+    const getData = async () => {
+      try {
+        const { data } = await axios.get('http://localhost:8080/placement-record')
+        console.log(data)
+      } catch (error) {
+        console.log(error.message)
+      }
+    }
+    getData()
+  </script>
+  <script src="js/placement.js"></script>
+</body>
+
+</html>

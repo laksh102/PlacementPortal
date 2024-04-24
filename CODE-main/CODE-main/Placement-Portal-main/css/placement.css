@@ -1,0 +1,78 @@
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+/* Header Styles */
+#header {
+  background-color: #204584;
+  color: white;
+  padding: 10px 0;
+  text-align: center;
+}
+
+#logo {
+  display: inline-block;
+}
+
+#logo img {
+  height: 50px;
+}
+
+.nav {
+  margin-top: 10px;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+/* Table Styles */
+.company-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.company-table th, .company-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.company-table th {
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+.company-table tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.company-table tbody tr:hover {
+  background-color: #ddd;
+}
+
+/* Sort Options Styles */
+.sort-options {
+  margin-top: 20px;
+  text-align: right;
+}
+
+.sort-options label {
+  font-weight: bold;
+}
+
+.sort-options select {
+  padding: 5px;
+  border-radius: 5px;
+}

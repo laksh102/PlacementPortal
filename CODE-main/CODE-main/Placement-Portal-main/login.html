@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Login Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#204584">
+  <meta name="msapplication-navbutton-color" content="#204584">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#204584">
+  <link rel="icon" href="p/logo.png">
+  <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/login.css">
+</head>
+
+<body>
+  <div id="header">
+    <div id="logo-holder" style="align-items: center;">
+      <div id="logo" style="height:50px; display: flex; align-items: center;">
+        <img src="p/logo.png" style="height: 90%; width: auto;">
+      </div>
+    </div>
+    <div id="nav" class="nav">
+      <a href="index.html">Home</a>
+      <a href="index.html#about">About Us</a>
+      <a href="index.html#whyus">Why Us</a>
+
+      <a href="index.html#recruiters">Past Recruiters</a>
+      <a href="index.html#placement-record">Placement Record</a>
+      <a href="index.html#infrastructure">Infrastructure</a>
+      <a href="index.html#contactus">Contact Us</a>
+      <a href="placement.html">Placement</a>
+      <a href="login.html">Login</a>
+      <!-- <a href="javascript:void(0)" onclick="showLoginForm()"  class="blue-background">Login</a> -->
+    </div>
+
+    <div id="nav-mobile" class="nav">
+      <a href="javascript:void(0)" onclick="$('#mobile-menu').css('display','flex')" class="blue-background">Menu</a>
+    </div>
+  </div>
+  <!-- hamburger -->
+  <div class="header-hamburgerrr">
+    <div class="hamburgerrr-line1"></div>
+    <div class="hamburgerrr-line3"></div>
+  </div>
+  <!-- hamburger end -->
+  <div id="header_top">
+    <div class="header_top-flex">
+      <div class="header_top-left" style="text-align: center;">
+        <h1>Poornima Institute Of Engineering & Technology</h1>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="left">
+      <img src="p/log.avif" alt="Image" class="image">
+    </div>
+    <div class="right">
+      <div class="form-container">
+        <div class="login-form">
+          <h2>Login</h2>
+          <form id="login-form">
+            <div class="username">
+              <label for="username">E-mail</label>
+              <input type="text" name="username" id="username" placeholder="Type here" required>
+              <i class="ri-user-3-line login__icon"></i>
+            </div>
+            <div class="password">
+              <label for="password">Password</label>
+              <input type="password" name="password" id="password" placeholder="Type here" required>
+              <span class="login__eye">
+                <i class="ri-eye-off-line" id="logineye"></i>
+              </span>
+            </div>
+            <div class="forgot-password">
+              <a href="#">Forgot password?</a>
+            </div>
+            <input type="submit" value="Login">
+            <div class="remember-me">
+              <label><input type="checkbox"> Remember Me </label>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+    integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+  <script type="text/javascript" src="js/main.js"></script>
+
+  <script>
+    var email = document.getElementById("username"); // Assuming "username" field corresponds to email
+    var password = document.getElementById("password");
+    document.getElementById('logineye').addEventListener("click", (e) => {
+
+      if(password.type=="password"){
+        e.target.className = "ri-eye-line"
+        password.type="text"
+      }else{
+        e.target.className = "ri-eye-off-line"
+        password.type="password"
+      }
+    })
+    // Function to handle user login
+    function loginUser(event) {
+      event.preventDefault()
+
+      // Create a data object with email and password
+      const data = {
+        email: email.value,
+        password: password.value
+      }
+
+      axios.post('http://localhost:8080/login', data).then(res => {
+        console.log(res.data)
+        // alert('login success')
+        location.href="/Placement-Portal-main/placement.html"
+      }).catch(error => {
+        alert(error.message)
+        console.log(error)
+      })
+    }
+
+    // Event listener for login form submission
+    document.getElementById("login-form").addEventListener("submit", loginUser);
+  </script>
+</body>
+
+</html>

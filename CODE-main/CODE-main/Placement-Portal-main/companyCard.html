@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Cards</title>
+    <link rel="stylesheet" href="Placement-Portal-main/misc.css">
+    
+</head>
+<body>
+  <div id="header">
+    <div id="logo-holder" style="align-items: center;">
+      <div id="logo" style="height:50px; display: flex; align-items: center;">
+        <img src="p/logo.png" style="height: 90%; width: auto;">
+      </div>
+    </div>
+    <div id="nav" class="nav">
+      <div class="dropdown">
+        <a href="index.html" class="dropbtn">Home</a>
+        <div class="dropdown-content">
+            <a href="index.html#about">About Us</a>
+            <a href="index.html#whyus">Why Us</a>
+      
+            <a href="index.html#recruiters">Past Recruiters</a>
+            <a href="index.html#placement-record">Placement Record</a>
+            <a href="index.html#infrastructure">Infrastructure</a>
+            <a href="index.html#contactus">Contact Us</a>
+        </div>
+    </div>
+    <a href="companyCard.html">Placement</a>
+    <a href="login.html">Login</a>
+      <!-- <a href="javascript:void(0)" onclick="showLoginForm()"  class="blue-background">Login</a> -->
+    </div>
+  
+    <!-- <div id="nav-mobile" class="nav">
+      <a href="javascript:void(0)" onclick="$('#mobile-menu').css('display','flex')" class="blue-background">Menu</a>
+    </div> -->
+  </div>
+
+   <div class="header-hamburgerrr">
+    <div class="hamburgerrr-line1"></div>
+    <!-- <div class="hamburger-line2"></div> -->
+    <div class="hamburgerrr-line3"></div>
+  </div>
+
+<div class="filter-bar">
+    <div>
+        <input type="text" id="search" placeholder="Search by Company Name">
+        <select id="filter-year">
+            <option value="">Filter by Year</option>
+            <!-- Options for filtering by year will be added dynamically -->
+        </select>
+        <select id="filter-month">
+            <option value="">Filter by Month</option>
+            <!-- Options for filtering by month will be added dynamically -->
+        </select>
+        <select id="filter-alphabetically">
+            <option value="">Filter Alphabetically</option>
+            <option value="asc">A-Z</option>
+            <option value="desc">Z-A</option>
+        </select>
+    </div>
+    <button onclick="applyFilters()">Apply Filters</button>
+</div>
+
+
+<div class="add-button-container">
+    <button class="add-button" onclick="redirectToAddCompanyPage()">Add Company</button>
+</div>
+
+<div class="company-cards" id="company-cards">
+    <!-- Company cards will be dynamically added here -->
+</div>
+
+<div class="pagination">
+    <button onclick="previousPage()">Previous</button>
+    <button onclick="nextPage()">Next</button>
+</div>
+
+<footer id="footer">
+    <div class="heading-footer" style="align-items: center;">
+      <h1 class="fot-head" style="color: white;">
+        Placement Cell, PIET 
+        </h1>
+    </div>
+    <div id="footer-container-down">
+      <div id="footer-address" class="flex-footer">
+        <span class="footer-subsection-heading" style="width: 100%; text-align: center;">
+          ADDRESS
+        </span>
+        <div class="footer-subsection-text">
+          POORNIMA Institute Of Engineering & Technology <br>   <br>
+          Jaipur <br> PIN - 302033.
+        </div>
+      </div>
+      <div id="footer-quick-links" class="flex-footer">
+        <span class="footer-subsection-heading" style="width: 100%; text-align: center;">
+          QUICK LINKS
+        </span>
+        <div class="footer-subsection-text">
+          <a href="http://PIET.ac.in/php/e-Brochure.php" target="_blank" rel="noopener noreferrer">
+            Placement Brochure</a></br>
+          <a href="http://PIET.ac.in/newfacultypages/faculty1.php" target="_blank"
+            rel="noopener noreferrer">Faculty Members</a></br>
+          <a href="http://PIET.ac.in/php/administration.php" target="_blank"
+            rel="noopener noreferrer">Administrative body</a></br>
+        </div>
+      </div>
+      <div id="footer-explore" class="flex-footer">
+        <span class="footer-subsection-heading" style="width: 100%; text-align: center;">
+          EXPLORE
+        </span>
+        <div class="footer-subsection-text">
+          <a href="http://PIET.ac.in/php/Facilities_landing_page-v6.php" target="_blank"
+            rel="noopener noreferrer">Facilities</a></br>
+          <a href="https://PIET.ac.in/php/studentachievement.php" target="_blank" rel="noopener noreferrer">
+            Student's Achievements</a></br>
+          <a href="https://PIET.ac.in/php/Academic_cal.php" target="_blank"
+            rel="noopener noreferrer">Academic Calendar</a></br>
+          <a href="https://PIET.ac.in/php/proj_spons.php" target="_blank" rel="noopener noreferrer">
+            Sponsored Projects</a></br>
+          <a href="http://PIET.ac.in/php/reach_PIET_.php" target="_blank" rel="noopener noreferrer">How to
+            reach PIET </a></br>
+        </div>
+      </div>
+      <div id="footer-contact-us" class="flex-footer">
+        <span class="footer-subsection-heading" style="width: 100%; text-align: center;">
+          CONTACT US
+        </span>
+        <div class="footer-subsection-text">
+          <a href="mailto:tnp@PIET.ac.in">Placement Cell - tnp@PIET.ac.in</a></br>
+          <a href="mailto:studentcoordinator_placement@PIET.ac.in">Contact no : +91 8168824544</a></br>
+        </div>
+        <div id="footer-icons" style="display:inline-flex;">
+          <a href="https://www.linkedin.com/in/tnpinPIET/" target="_blank"><img style="width:80%; height:80%;"
+              src="img/linkedin.png" /> </a>
+          <a href="https://twitter.com/PIETk_placement" target="_blank"> <img style="width:80%; height:80%;"
+              src="img/twitter.png" /></a>
+          <a href="https://www.youtube.com/channel/pc" target="_blank"><img
+              style="width:80%; height:80%;" src="img/youtube.png"/></a>
+          <a href="mailto:tnp@PIET.ac.in" target="_blank"><img style="width:80%; height:80%;"
+              src="img/email.png"/></a>
+        </div>
+      </div>
+    </div>
+    <div id="footer-credits">
+      Copyright &copy; 2023 PIET .
+    </div>
+</footer>
+
+<!-- <div id="mobile-menu">
+  <a href="#home" onclick="$('#mobile-menu').hide()">Home</a>
+  <a href="#about" onclick="$('#mobile-menu').hide()">About Us</a>
+  <a href="#infrastructure" onclick="$('#mobile-menu').hide()">Infrastructure</a>
+  <a href="#placement-record" onclick="$('#mobile-menu').hide()">Placement Record</a>
+  <a href="#footer" onclick="$('#mobile-menu').hide()">Contact Us</a>
+  
+</div> -->
+
+<script>
+    // Define variables for pagination
+    let currentPage = 1;
+    const cardsPerPage = 20;
+
+    // Function to fetch and display company cards
+    async function fetchCompanyCards() {
+        try {
+            const response = await fetch('http://localhost:8080/api/companies');
+            const companies = await response.json();
+
+            const companyCardsContainer = document.getElementById('company-cards');
+            companyCardsContainer.innerHTML = '';
+
+            const startIndex = (currentPage - 1) * cardsPerPage;
+            const endIndex = currentPage * cardsPerPage;
+
+            companies.slice(startIndex, endIndex).forEach(company => {
+                const companyCard = `
+                    <div class="company-card" onclick="redirectToCompanyDetailsPage(${company.id})">
+                        <img src="${company.logo}" alt="${company.name} Logo">
+                        <div class="company-card-content">
+                            <h3>${company.name}</h3>
+                            <p>Placement Drive Date: ${company.visitDate}</p>
+                            <p>Number of Students Placed: ${company.studentsPlaced}</p>
+                            <p>Highest Package: ${company.package}</p>
+                        </div>
+                    </div>
+                `;
+                companyCardsContainer.innerHTML += companyCard;
+            });
+        } catch (error) {
+            console.error('Error fetching company cards:', error);
+        }
+    }
+
+    // Function to redirect to Add Company page
+    function redirectToAddCompanyPage() {
+        window.location.href = 'addCompanyDetails.html';
+    }
+
+    // Function to redirect to Company Details page
+    function redirectToCompanyDetailsPage(companyId) {
+        window.location.href = companyDetails.html?id=$:{companyId};
+    }
+
+    // Function to apply filters
+    function applyFilters() {
+        // Implement filter logic here
+        console.log('Filters applied');
+    }
+
+    // Function to go to the previous page
+    function previousPage() {
+        if (currentPage > 1) {
+            currentPage--;
+            fetchCompanyCards();
+        }
+    }
+
+    // Function to go to the next page
+    function nextPage() {
+        // Assuming companies.length contains the total number of companies
+        if (currentPage < Math.ceil(companies.length / cardsPerPage)) {
+            currentPage++;
+            fetchCompanyCards();
+        }
+    }
+
+
+    // Fetch and display company cards on page load
+    fetchCompanyCards();
+</script>
+
+</body>
+</html>
